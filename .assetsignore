@@ -1,0 +1,14 @@
+# Files in the assets directory (repo root) that must NOT be uploaded/served.
+node_modules
+.git
+.gitignore
+.wrangler
+.claude
+package.json
+package-lock.json
+wrangler.jsonc
+*.md
+*.log
+.env
+.env.*
+.DS_Store

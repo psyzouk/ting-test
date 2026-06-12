@@ -1,0 +1,12 @@
+// Cloudflare Workers config — static-assets-only Worker (no server code).
+// The git-connected build runs `npx wrangler deploy`, which needs this file;
+// without it the build fails with "Missing entry-point to Worker script or
+// to assets directory".
+{
+  "name": "ting-lee-demo",
+  "compatibility_date": "2026-06-12",
+  "assets": {
+    "directory": ".",
+    "html_handling": "auto-trailing-slash"
+  }
+}
