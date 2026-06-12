@@ -11,8 +11,8 @@
   --ink-soft: #55584F;
   --jade: #33574A;
   --jade-mid: #5E8273;
-  --clay: #B5623C;
-  --clay-deep: #8F4A2C;
+  --clay: #A85733;       /* 5.15:1 on white — AA for button/nav text */
+  --clay-deep: #8F4A2C;  /* 6.6:1 on white, 5.96:1 on paper for links */
   --gold-haze: #E7D9BE;
   --line: #E3DACB;
 
@@ -28,7 +28,7 @@
 
 /* Reset-ish ------------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 84px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
