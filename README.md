@@ -20,7 +20,7 @@ Built in phases.
 ## Run locally
 
 ```bash
-npm run dev   # python3 -m http.server 8099  →  http://localhost:8099
+python3 -m http.server 8099   # → http://localhost:8099
 ```
 
 ## Principles

@@ -1,38 +1,37 @@
-# Deploying to Cloudflare Pages
+# Deploying
 
 This is a static, no-build site (plain HTML/CSS/JS). The deployable root is the
 repository root (`index.html` + `assets/` + `_headers` + `robots.txt`). There is
-**no build step** — build command is empty and the output directory is `/` (root).
+**no build step and no `package.json`** — deliberately, so build pipelines treat
+the repo as plain static files.
 
-## Option A — Connect the GitHub repo (recommended, no secrets shared)
+## Cloudflare Pages (Connect to Git)
 
 1. In the Cloudflare dashboard: **Workers & Pages → Create → Pages → Connect to Git**.
-2. Choose the `psyzouk/ting-test` repo and the branch you want
-   (`claude/beautiful-wozniak-6am7bh` for the demo, or `main` once merged).
+2. Choose the `psyzouk/ting-test` repo, production branch `main`.
 3. Build settings:
    - **Framework preset:** None
    - **Build command:** *(leave empty)*
-   - **Build output directory:** `/`
-4. Deploy. Cloudflare gives you a `https://ting-lee-demo.pages.dev` URL and redeploys
-   on every push.
+   - **Build output directory:** `/` *(leave empty / root — do NOT leave it as `public`)*
+4. Deploy. Cloudflare gives you `https://<project>.pages.dev` and redeploys on push.
 
-## Option B — Direct upload from the CLI (needs a Cloudflare API token)
+### If a deploy fails
 
-```bash
-npm install                 # installs wrangler locally
-export CLOUDFLARE_API_TOKEN=...   # token with "Cloudflare Pages: Edit"
-export CLOUDFLARE_ACCOUNT_ID=...  # your account id
-npm run deploy              # wrangler pages deploy . --project-name ting-lee-demo
-```
+- *"Output directory 'public' not found"* → Settings → Builds & deployments →
+  set **Build output directory** to `/` (root).
+- Any npm/node/wrangler error → set **Build command** to empty and
+  **Framework preset** to None. (There is intentionally no `package.json`.)
+- Wrong content deploying → check **Production branch** is `main`.
 
-The first run creates the `ting-lee-demo` Pages project and prints the live
-`*.pages.dev` URL.
+## GitHub Pages (automatic)
+
+`.github/workflows/pages.yml` deploys the site to GitHub Pages on every push to
+`main`. The published URL is shown in the workflow run and in the repo's
+**Settings → Pages**. Note: GitHub Pages ignores the Cloudflare-specific
+`_headers` file; security headers apply on the Cloudflare deployment.
 
 ## Notes
 
-- `_headers` sets a strict Content-Security-Policy that allows only self-hosted
-  scripts and Google Fonts (CSS + font files). If you self-host the fonts later,
-  tighten `style-src`/`font-src` to `'self'`.
 - The site sends `noindex` (meta + `robots.txt`) because it's an unsolicited demo.
   Remove both when/if it goes live with Ting's approval.
-- Custom domain (e.g. her own): **Pages project → Custom domains** after approval.
+- Custom domain: Pages project → Custom domains, after Ting approves.
