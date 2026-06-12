@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ting Lee counseling">
+  <rect width="64" height="64" rx="14" fill="#33574A"/>
+  <path d="M32 16c7 6 7 14 0 20-7-6-7-14 0-20z" fill="#E7D9BE"/>
+  <path d="M32 24v22" stroke="#E7D9BE" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M32 40c-4-2-7-1-9 1 3 2 7 2 9-1zM32 40c4-2 7-1 9 1-3 2-7 2-9-1z" fill="#B5623C"/>
+</svg>
