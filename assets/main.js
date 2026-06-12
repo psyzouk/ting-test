@@ -31,6 +31,16 @@
     });
   }
 
+  // --- Elevate header on scroll -------------------------------------------
+  var header = document.querySelector(".site-header[data-elevate]");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("is-elevated", window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
   // --- Scroll reveal (respects reduced-motion) ----------------------------
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var revealables = document.querySelectorAll(".reveal");

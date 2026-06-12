@@ -118,8 +118,8 @@ Relationship issues. — **Confidence: Medium**
 
 | Fact | Source | Confidence |
 |---|---|---|
-| Individual session $150 | Client brief only — **not found online** | Low |
-| Couples session $180 | Client brief only — **not found online** | Low |
+| Individual session $150 | Client brief + 2nd directory-summary source (2026-06) | Medium-High |
+| Couples session $180 | Client brief + directory-summary source (2026-06) | Medium |
 | Sliding scale offered | Search summary of PT profile ("sliding scale fee option is offered") | Medium |
 | Accepts insurance | Search summaries | High |
 | Highmark BCBS of Western NY | Search summary | Medium-High |
@@ -152,6 +152,19 @@ for this therapist, or conflict with confirmed facts. Excluded from the build.
   on the CA BBS license-lookup before it appears anywhere.
 
 ---
+
+### Social media / web presence
+
+| Fact | Source | Confidence |
+|---|---|---|
+| Instagram account | **None found** tied to this Ting Lee | — |
+| LinkedIn account | **None found** tied to this Ting Lee (name too common to attribute safely) | — |
+| Own practice website | **None found** — listings are directory profiles only | — |
+
+> Searched Instagram/LinkedIn/web for "Ting Lee" + "Asian Mental Health Counseling"
+> / Buffalo / the hard identifiers (2026-06). No social or personal-site presence
+> could be tied to her via a hard identifier. Per the identity guard, no handles or
+> links are placed on the site. Added to the Verify-with-Ting list.
 
 ## 4. Discrepancies to resolve
 
@@ -195,6 +208,11 @@ for this therapist, or conflict with confirmed facts. Excluded from the build.
       LGBTQ+ and racial-justice-allied language.
 - [ ] **Testimonials** — any client/colleague quote requires explicit permission;
       none are reproduced without it (placeholder stub used in the demo).
+- [ ] **Social links** — if she has Instagram / LinkedIn / a practice page she wants
+      linked, provide the URLs (none were found that could be safely attributed to her).
+- [ ] **Photography** — the demo uses clearly-labeled stock nature imagery as
+      placeholders; replace with her own approved photos (and confirm we may use any
+      stock kept, under its license).
 
 ---
 
