@@ -6,14 +6,22 @@ to show her; there is no existing site.
 
 ## Status
 
-Built in phases. **Currently: Phase 1 complete (Source & Verify) — awaiting review.**
+Built in phases.
 
 - **Phase 0 — Setup:** repo created. ✅
 - **Phase 1 — Source & Verify:** [`research.md`](./research.md) — sourced-facts table,
-  identity-guard log, and the Verify-with-Ting checklist. ✅ *(review gate)*
-- **Phase 2 — Architecture & design direction:** pending approval.
-- **Phase 3 — Build:** static site, mobile-first, WCAG AA.
-- **Phase 4 — Ship:** deploy to Cloudflare Pages.
+  identity-guard log, and the Verify-with-Ting checklist. ✅
+- **Phase 2 — Architecture & design direction:** [`design-direction.md`](./design-direction.md).
+  Approved: single-page, sage/clay palette, Fraunces + Inter, plain HTML/CSS/JS. ✅
+- **Phase 3 — Build:** static site (`index.html` + `assets/`), mobile-first, WCAG AA. ✅
+- **Phase 4 — Ship:** Cloudflare Pages — see [`DEPLOY.md`](./DEPLOY.md). Needs Ting's
+  owner to connect the repo or provide a Cloudflare token (no credentials in this env).
+
+## Run locally
+
+```bash
+npm run dev   # python3 -m http.server 8099  →  http://localhost:8099
+```
 
 ## Principles
 

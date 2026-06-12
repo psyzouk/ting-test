@@ -1,0 +1,13 @@
+{
+  "name": "ting-lee-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone concept demo site for Ting Lee, LMHC, LPCC — Asian Mental Health Counseling (Buffalo, NY). Built from public information; all copy is draft placeholder.",
+  "scripts": {
+    "dev": "python3 -m http.server 8099",
+    "deploy": "wrangler pages deploy . --project-name ting-lee-demo"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
